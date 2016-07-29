@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>sintra sample</title>
+  </head>
+  <body>
+    <% if @posts.empty? %>
+      一件も投稿がありません
+    <% else %>
+      <ul>
+      <% @posts.each do |post| %>
+        <li>
+        <%= post.title %>
+        </li>
+      <% end %>
+      </ul>
+    <% end %>
+    <a href="/posts/new">投稿画面へ</a>
+  </body>
+</html>
